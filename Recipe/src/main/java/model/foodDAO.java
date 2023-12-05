@@ -16,7 +16,7 @@ public class foodDAO {
 	public List<foodDTO> getFoodList(){
 		List<foodDTO> li = null;
 		try {
-			li = sqlSession.selectList("getFoodList");
+			li = sqlSession.selectList("database.MemberMapper.getFoodList");
 		} catch (Exception e) {
 			e.getStackTrace();
 		}finally {

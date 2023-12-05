@@ -5,11 +5,11 @@ public class foodDTO {
 	String F_NAME;
 	int F_PRICE;
 	String F_MONTH;
-	public foodDTO(int f_NUM, String f_NAME, int f_PRICE, String f_MONTH) {
-		F_NUM = f_NUM;
-		F_NAME = f_NAME;
-		F_PRICE = f_PRICE;
-		F_MONTH = f_MONTH;
+	public foodDTO(int F_NUM, String F_NAME, int F_PRICE, String F_MONTH) {
+		this.F_NUM = F_NUM;
+		this.F_NAME = F_NAME;
+		this.F_PRICE = F_PRICE;
+		this.F_MONTH = F_MONTH;
 	}
 	public foodDTO() {
 		
