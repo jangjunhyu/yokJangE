@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 5. Mapper 만들기 >> SQL 쿼리문 작성하기 -->
+  <!-- namespace : 현재 Mapper의 id를 그룹화 하는 속성
+  					sql태그의 id가 중복 될 수 있기 때문에 id를 잘 찾아갈 수 있도록 그룹화
+  					주로 현재 Mapper파일의 경로를 작성-->
+<mapper namespace="database.MemberMapper">
+	<insert id="insertMember" parameterType="model.MemberDTO">
+		insert into member_info values(#{nick}, #{address}, #{score}, sysdate)
+	</insert>
+	<select id="getAllAddress" resultType="model.MemberDTO">
+		select * from member_info
+	</select>
+	<select id="getToyInfo" parameterType="String" resultType="model.ToyDTO">
+		select * from product_info where user_id=#{id}
+	</select>
+	<select id="getAddress" parameterType="String" resultType="String">
+		select address from member_info where user_id=#{id}
+	</select>
+	<select id="getToy" parameterType="int" resultType="model.ToyDTO">
+		select * from product_info where p_num=#{p_num}
+	</select>
+	<select id="getAddressToys" resultType="model.addressToyDTO">
+		select product_info.p_num, member_info.address, product_info.user_id, product_info.category, product_info.p_name, product_info.rent_price
+from member_info, product_info
+where member_info.user_id = product_info.user_id
+	</select>
+	<update id="updateGiveState" parameterType="int">
+		update product_info set p_status='대여중' where p_num=#{p_num}
+	</update>
+	<update id="updateTakeState" parameterType="int">
+		update product_info set p_status='대여가능' where p_num=#{p_num}
+	</update>
+	<insert id="setPayCheck" parameterType="model.payCheckDTO">
+		insert into paycheck values(pc_seq.nextval, #{user_id}, #{p_num}, #{lender_id}, #{p_name}, #{price}, #{pay_choice}, '확인요청', null)
+	</insert>
+	<select id="getPayCheck" resultType="model.payCheckDTO">
+		select * from paycheck where user_id=#{#user_id} and TOYSTATE='확인요청'
+	</select>
+	<insert id="insertTranse" parameterType="model.TranseDTO">
+		insert into transaction_info values (NUM_TRANSACTION.nextval, #{give_user}, #{p_num}, sysdate, sysdate, #{transe_status}, #{take_user})
+	</insert>
+	
+	<update id="updatePayCheck" parameterType="model.pcUpdateDTO">
+		update paycheck set TOYSTATE='확인완료', lend='대여중' WHERE P_NUM=#{p_num} and lender_id=#{lender_id}
+	</update>
+	
+	<insert id="setChatting" parameterType="model.chattingDTO">
+		insert into message_board values(num_chat.nextval, #{sender}, #{recipient}, #{text}, sysdate,#{p_num})
+	</insert>
+
+</mapper>
