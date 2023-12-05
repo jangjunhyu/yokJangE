@@ -27,5 +27,11 @@
 		</tr>
 		<%}%>
 	</table>
+		<%for(int i=0; i<12; i++){ %>
+		<a href="./Main.jsp?month=<%=i+1%>"><%=i+1%>월</a>
+	<%}%>
+	<div>
+		<a href="./searchMart.jsp">주변 마트 찾기</a>
+	</div>
 </body>
 </html>
