@@ -22,6 +22,11 @@ public class foodDAO {
 		}finally {
 			sqlSession.close();
 		}
+		if(li==null) {
+			System.out.println("li가 비어있습니다.");
+		}else {
+			System.out.println("li가 비어있지 않습니다.");
+		}
 		return li;
 	}
 }
