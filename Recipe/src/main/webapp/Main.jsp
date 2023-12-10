@@ -15,7 +15,7 @@
 	List<foodDTO> list = new foodDAO().getFoodList();
 	LocalDate now = LocalDate.now();
 	int nowMonth = now.getMonthValue();
-	
+
 	String nm = "";
 	if(request.getParameter("month")==null){
 		nm = String.valueOf(nowMonth);
