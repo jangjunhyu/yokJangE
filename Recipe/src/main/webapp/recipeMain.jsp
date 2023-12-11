@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="model.foodDAO"%>
 <%@page import="model.foodDTO"%>
@@ -41,7 +42,14 @@
 	}else{
 		nm = request.getParameter("month");
 	}
+	ArrayList<Integer> rdArr = new ArrayList<>();
+	for(int i=0; i<list.size(); i++){
+		for(int j=0; j<i; j++){
+			
+		}
+	}
 %>
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -128,19 +136,9 @@
                         </div>
                         <ul>
                             <li><a href="#">전체보기</a></li>
-                            <li><a href="#">1월</a></li>
-                            <li><a href="#">2월</a></li>
-                            <li><a href="#">3월</a></li>
-                            <li><a href="#">4월</a></li>
-                            <li><a href="#">5월</a></li>
-                            <li><a href="#">5월</a></li>
-                            <li><a href="#">6월</a></li>
-                            <li><a href="#">7월</a></li>
-                            <li><a href="#">8월</a></li>
-                            <li><a href="#">9월</a></li>
-                            <li><a href="#">10월</a></li>
-                            <li><a href="#">11월</a></li>
-                            <li><a href="#">12월</a></li>
+						<%for(int i=0; i<12; i++){ %>
+							<li><a href="./recipeMain.jsp?month=<%=i+1%>"><%=i+1%>월</a></li>
+						<%}%>
                         </ul>
                     </div>
                 </div>
@@ -225,6 +223,9 @@
                 </div>
             </div>
             <div class="row featured__filter">
+		<%for(int i=0; i<list.size(); i++){
+			if(list.get(i).getF_MONTH().contains(nm)){
+		%>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
@@ -233,102 +234,12 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">광어</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#"><%=list.get(i).getF_NAME() %></a></h6>
+                            <h5><%=list.get(i).getF_PRICE()%>원</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">주꾸미</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">바지락</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">도미</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-5.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">굴</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-6.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">게</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-7.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">명태</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-8.jpg">
-                            <ul class="featured__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">과메기</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
+                <%}}%>
             </div>
         </div>
     </section>
@@ -380,6 +291,9 @@
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    	console.log(<%=Math.floor(Math.random()*100+1)%>)
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
