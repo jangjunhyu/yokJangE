@@ -97,6 +97,28 @@
         </div>
     </header>
     <!-- Header Section End -->
+    
+    <!-- 버튼 클릭 시 색깔 바꾸는 script -->
+    <header class="header">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var navLinks = document.querySelectorAll('.header__menu ul li a');
+    
+                navLinks.forEach(function (link) {
+                    link.addEventListener('click', function (event) {
+                        // Remove the 'active' class from all links
+                        navLinks.forEach(function (innerLink) {
+                            innerLink.parentElement.classList.remove('active');
+                        });
+    
+                        // Add the 'active' class to the clicked link's parent list item
+                        event.target.parentElement.classList.add('active');
+                    });
+                });
+            });
+        </script>
+    </header>
+    <!-- script 끝 -->
 
     <!-- Hero Section Begin -->
     <section class="hero">
