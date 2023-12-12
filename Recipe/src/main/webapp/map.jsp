@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -24,6 +26,13 @@
 </head>
 
 <body>
+<%
+String searchMart = "";
+if(request.getParameter("searchMart")!=null){
+	searchMart = request.getParameter("searchMart");
+}
+
+%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -192,8 +201,8 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="hero__search__form">
-                         <form action="#">
-                            <input type="text" placeholder="주변마트 검색">
+                         <form action="searchMartService">
+                            <input type="text" placeholder="주변마트 검색" name="searchMart">
                             <button type="submit" class="site-btn">검색</button>
                         </form>
                     </div>
@@ -204,7 +213,7 @@
     <!-- Contact Section End -->
 
     <!-- Map Begin -->
-    <div class="map" id="map">
+        <div class="map" id="map">
         
     </div>
     <!-- Map End -->
@@ -278,7 +287,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 var ps = new kakao.maps.services.Places(); 
 
 // 키워드로 장소를 검색합니다
-ps.keywordSearch('광주 말바우시장', placesSearchCB); 
+ps.keywordSearch('<%=searchMart%>', placesSearchCB); 
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
 function placesSearchCB (data, status, pagination) {
