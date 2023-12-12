@@ -595,7 +595,9 @@ ol {
 }
 
 .featured__item__pic {
-	height: 270px;
+	height: 200px;
+	width: 200px;
+	/* border-radius : 50%; */
 	position: relative;
 	overflow: hidden;
 	background-position: center center;
