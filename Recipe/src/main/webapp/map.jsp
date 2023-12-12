@@ -195,9 +195,10 @@ if(request.getParameter("searchMart")!=null){
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <!-- 
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
-                    </div>
+                    </div>  -->
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="hero__search__form">
