@@ -180,6 +180,38 @@ ol {
 	padding: 13px 30px 12px;
 	background: #7fad39;
 	border: none;
+	
+}
+
+.textarea_btn {
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 800;
+	text-transform: uppercase;
+	display: block;
+	background: #7fad39;
+	border: none;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	margin-right: 3px;
+	width: 10px;
+	height: 10px;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	align-items: center;
+}
+
+
+.submit-text {
+	position: relative;
+	top: 5%; 
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* Preloder */
@@ -595,8 +627,7 @@ ol {
 }
 
 .featured__item__pic {
-	height: 200px;
-	width: 200px;
+	height: 270px;
 	position: relative;
 	overflow: hidden;
 	background-position: center center;

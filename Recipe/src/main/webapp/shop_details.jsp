@@ -154,10 +154,6 @@
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                <div class="hero__search__categories">
-                                    카테고리
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
                                 <input type="text" placeholder="레시피">
                                 <button type="submit" class="site-btn">검색</button>
                             </form>
@@ -384,11 +380,17 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
                         <h6>건의사항</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
+                        <p>불편사항이나 제안사항이 있으신가요?
+                            <br>
+                            제철식당 레시피에 전하고 싶은 의견을 남겨주세요.
+                        </p>
+                        <form action="#" class="form-container">
+                            <textarea name="board" cols="36" rows="5" style="resize: none;"></textarea>
+                            <button type="submit" class="textarea_btn">
+                                <span class="submit-text">의견제출</span>
+                            </button>
                         </form>
+
                     </div>
                 </div>
             </div>
