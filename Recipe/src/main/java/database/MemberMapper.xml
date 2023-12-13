@@ -7,4 +7,7 @@
 	<select id="getFoodList" resultType="model.foodDTO">
 		select * from foods
 	</select>
+	<select id="getRecipeList" resultType="model.recipeDTO" parameterType="int">
+		select * from recipe1 where f_num = #{f_num}
+	</select>
 </mapper>
