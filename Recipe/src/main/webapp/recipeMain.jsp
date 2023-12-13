@@ -174,31 +174,13 @@
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
+                <%for(int i = 0; i<list.size(); i++){ %>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="#">광어</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/seafood/<%=list.get(i).getF_IMG()%>">
+                            <h5><a href="#"><%=list.get(i).getF_NAME() %></a></h5>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">도미</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="#">굴</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">게</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="#">주꾸미</a></h5>
-                        </div>
-                    </div>
+                    <%} %>
                 </div>
             </div>
         </div>
@@ -234,7 +216,7 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#"><%=list.get(i).getF_NAME() %></a></h6>
+                            <h6><a href="./shop_details.jsp?F_NUM=<%=list.get(i).getF_NUM()%>"><%=list.get(i).getF_NAME() %></a></h6>
                             <h5><%=list.get(i).getF_PRICE()%>원</h5>
                         </div>
                     </div>
