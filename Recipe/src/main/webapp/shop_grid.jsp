@@ -193,13 +193,13 @@
                     <%for(int i=0; i<list.size(); i++){ %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/제철요리사진/<%=list.get(i).getR_PIC()%>">
+                                <div class="product__item__pic set-bg" data-setbg="img/제철요리사진/<%=list.get(i).getR_PIC()%>" style="width:300px">
                                     <ul class="product__item__pic__hover">
                                         보기
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="./shop_details.jsp?F_NUM=<%=list.get(i).getR_NUM()%>"><%=list.get(i).getR_NAME() %></a></h6>
+                                    <h6><a href="./shop_details.jsp?R_NUM=<%=list.get(i).getR_NUM()%>"><%=list.get(i).getR_NAME() %></a></h6>
                                     <h5>중</h5>
                                 </div>
                             </div>
@@ -207,12 +207,7 @@
                         
                         <%} %>
                     </div>
-                                        <div class="product__pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
+
             </div>
         </div>
     </section>
