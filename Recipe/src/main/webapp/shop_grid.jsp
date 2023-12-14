@@ -142,19 +142,9 @@
                         </div>
                         <ul>
                             <li><a href="#">전체보기</a></li>
-                            <li><a href="#">1월</a></li>
-                            <li><a href="#">2월</a></li>
-                            <li><a href="#">3월</a></li>
-                            <li><a href="#">4월</a></li>
-                            <li><a href="#">5월</a></li>
-                            <li><a href="#">5월</a></li>
-                            <li><a href="#">6월</a></li>
-                            <li><a href="#">7월</a></li>
-                            <li><a href="#">8월</a></li>
-                            <li><a href="#">9월</a></li>
-                            <li><a href="#">10월</a></li>
-                            <li><a href="#">11월</a></li>
-                            <li><a href="#">12월</a></li>
+                        <%for(int i=0; i<12; i++){ %>
+							<li><a href="./recipeMain.jsp?month=<%=i+1%>"><%=i+1%>월</a></li>
+						<%}%>
                         </ul>
                     </div>
                 </div>
@@ -209,7 +199,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#"><%=list.get(i).getR_NAME() %></a></h6>
+                                    <h6><a href="./shop_details.jsp?F_NUM=<%=list.get(i).getR_NUM()%>"><%=list.get(i).getR_NAME() %></a></h6>
                                     <h5>중</h5>
                                 </div>
                             </div>

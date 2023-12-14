@@ -26,6 +26,9 @@
 </head>
 
 <body>
+<%
+	int R_NUM = Integer.parseInt(request.getParameter("R_NUM"));
+%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -48,7 +51,7 @@
                 <li><a href="#"></a></li>
                 <li class="active"><a href="./shop-details.html">레시피</a></li>
                 <li><a href="#"></a></li>
-                <li><a href="./contact.html">주변마트 검색</a></li>
+                <li><a href="./map.jsp">주변마트 검색</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -86,7 +89,7 @@
                             <li><a href="#"></a></li>
                             <li class="active"><a href="./shop-details.html">레시피</a></li>
                             <li><a href="#"></a></li>
-                            <li><a href="./contact.html">주변마트 검색</a></li>
+                            <li><a href="./map.jsp">주변마트 검색</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -134,19 +137,9 @@
                         </div>
                         <ul>
                             <li><a href="#">전체보기</a></li>
-                            <li><a href="#">1월</a></li>
-                            <li><a href="#">2월</a></li>
-                            <li><a href="#">3월</a></li>
-                            <li><a href="#">4월</a></li>
-                            <li><a href="#">5월</a></li>
-                            <li><a href="#">5월</a></li>
-                            <li><a href="#">6월</a></li>
-                            <li><a href="#">7월</a></li>
-                            <li><a href="#">8월</a></li>
-                            <li><a href="#">9월</a></li>
-                            <li><a href="#">10월</a></li>
-                            <li><a href="#">11월</a></li>
-                            <li><a href="#">12월</a></li>
+                        <%for(int i=0; i<12; i++){ %>
+							<li><a href="./recipeMain.jsp?month=<%=i+1%>"><%=i+1%>월</a></li>
+						<%}%>
                         </ul>
                     </div>
                 </div>
