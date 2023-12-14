@@ -9,7 +9,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>욕쟁이 할머니 제철식당</title>
+    <title>제철식당</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@ if(request.getParameter("searchMart")!=null){
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="#"><img src="img/logo.png" alt=""></a>
+            <a href="./recipeMain.jsp"><img src="img/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__widget">
             <div class="header__top__right__auth">
