@@ -23,4 +23,15 @@ public class recipeDAO {
 		}
 		return li;
 	}
+	public recipeDTO getRecipeVo(int R_NUM) {
+		recipeDTO vo = null;
+		try {
+			vo = sqlSession.selectOne("database.MemberMapper.getRecipeVo", R_NUM);
+		} catch (Exception e) {
+			e.getStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return vo;
+	}
 }
