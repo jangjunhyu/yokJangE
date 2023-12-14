@@ -69,9 +69,9 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./recipeMain.jsp">홈</a></li>
-                <li><a href="./contact.html"></a></li>
+                <li><a href="#"></a></li>
                 <li><a href="./shop-details.html">레시피</a></li>
-                <li><a href="./contact.html"></a></li>
+                <li><a href="#"></a></li>
                 <li><a href="./contact.html">주변마트 검색</a></li>
             </ul>
         </nav>

@@ -52,7 +52,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li><a href="./index.html">홈</a></li>
+                <li><a href="./recipeMain.jsp">홈</a></li>
                 <li><a href="#"></a></li>
                 <li><a href="./shop-details.html">레시피</a></li>
                 <li><a href="#"></a></li>
@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./recipeMain.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
