@@ -199,7 +199,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="./shop_details.jsp?F_NUM=<%=list.get(i).getR_NUM()%>"><%=list.get(i).getR_NAME() %></a></h6>
+                                    <h6><a href="./shop_details.jsp?R_NUM=<%=list.get(i).getR_NUM()%>"><%=list.get(i).getR_NAME() %></a></h6>
                                     <h5>중</h5>
                                 </div>
                             </div>
