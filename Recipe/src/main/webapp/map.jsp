@@ -46,7 +46,7 @@ if(request.getParameter("searchMart")!=null){
         </div>
         <div class="humberger__menu__widget">
             <div class="header__top__right__auth">
-                로그인
+                
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -70,7 +70,7 @@ if(request.getParameter("searchMart")!=null){
                     <div class="col-lg-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                로그인
+                                
                             </div>
                         </div>
                     </div>
@@ -187,9 +187,6 @@ if(request.getParameter("searchMart")!=null){
     <div class="col-lg-12 text-center">
         <div class="breadcrumb__text2">
             <h2>주변마트 검색</h2>
-            <div class="breadcrumb__option">
-                <span></span>
-            </div>
         </div>
     </div>
     <!-- Breadcrumb Section End -->
