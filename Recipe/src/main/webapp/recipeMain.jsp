@@ -147,7 +147,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg" style="height: 500px;">
                         <div class="hero__text">
                             <span>욕쟁이의 제철식당 레시피</span>
                             <h2>맛 보장 <br />100% !!</h2>
@@ -191,8 +191,6 @@
                     <div class="featured__controls">
                         <ul>
                             <li class="active" data-filter="*">전체</li>
-                            <li data-filter=".oranges">계절</li>
-                            <li data-filter=".fresh-meat">월별</li>
                         </ul>
                     </div>
                 </div>
