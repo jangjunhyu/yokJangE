@@ -54,8 +54,6 @@
             <ul>
                 <li><a href="./recipeMain.jsp">홈</a></li>
                 <li><a href="#"></a></li>
-                <li><a href="./shop-details.html">레시피</a></li>
-                <li><a href="#"></a></li>
                 <li><a href="./contact.html">주변마트 검색</a></li>
             </ul>
         </nav>
@@ -91,8 +89,6 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./recipeMain.jsp">홈</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="./shop-details.html">레시피</a></li>
                             <li><a href="#"></a></li>
                             <li><a href="./map.jsp">주변마트 검색</a></li>
                         </ul>
@@ -172,7 +168,7 @@
                     <div class="breadcrumb__text">
                         <h2>레시피 모음</h2>
                         <div class="breadcrumb__option">
-                            <span>레시피</span>
+                            <span></span>
                         </div>
                     </div>
                 </div>
@@ -198,7 +194,7 @@
                                         보기
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
+                                <div class="product__item__text" style="width: 300px;">
                                     <h6><a href="./shop_details.jsp?R_NUM=<%=list.get(i).getR_NUM()%>"><%=list.get(i).getR_NAME() %></a></h6>
                                     <h5>중</h5>
                                 </div>

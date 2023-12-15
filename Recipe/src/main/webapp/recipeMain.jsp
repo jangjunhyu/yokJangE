@@ -70,8 +70,6 @@
             <ul>
                 <li class="active"><a href="./recipeMain.jsp">홈</a></li>
                 <li><a href="#"></a></li>
-                <li><a href="./shop-details.html">레시피</a></li>
-                <li><a href="#"></a></li>
                 <li><a href="./contact.html">주변마트 검색</a></li>
             </ul>
         </nav>
@@ -107,8 +105,6 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./recipeMain.jsp">홈</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="./shop-details.html">레시피</a></li>
                             <li><a href="#"></a></li>
                             <li><a href="./map.jsp">주변마트 검색</a></li>
                         </ul>
@@ -155,7 +151,8 @@
                         <div class="hero__text">
                             <span>욕쟁이의 제철식당 레시피</span>
                             <h2>맛 보장 <br />100% !!</h2>
-                            <p>Free Pickup and Delivery Available</p>
+                            <p>오늘은 내가 요리사~
+                                <br>무슨 요리를 해먹을까~</p>
                             <a href="#" class="primary-btn">지금 바로 가기</a>
                         </div>
                     </div>

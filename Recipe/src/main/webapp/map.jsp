@@ -53,8 +53,6 @@ if(request.getParameter("searchMart")!=null){
             <ul>
                 <li><a href="./recipeMain.jsp">홈</a></li>
                 <li><a href="#"></a></li>
-                <li><a href="./shop-details.html">레시피</a></li>
-                <li><a href="#"></a></li>
                 <li class="active"><a href="./contact.html">주변마트 검색</a></li>
             </ul>
         </nav>
@@ -90,8 +88,6 @@ if(request.getParameter("searchMart")!=null){
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./recipeMain.jsp">홈</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="./shop-details.html">레시피</a></li>
                             <li><a href="#"></a></li>
                             <li class="active"><a href="./contact.html">주변마트 검색</a></li>
                         </ul>
