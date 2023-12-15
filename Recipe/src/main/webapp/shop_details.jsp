@@ -173,6 +173,14 @@
             </div>
         </div>
     </section>
+    <div class="col-lg-12 text-center">
+        <div class="breadcrumb__text2">
+            <h2>~ 레시피</h2>
+            <div class="breadcrumb__option">
+                <span></span>
+            </div>
+        </div>
+    </div>
     <!-- Breadcrumb Section End -->
 
     <!-- Product Details Section Begin -->

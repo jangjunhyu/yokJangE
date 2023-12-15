@@ -723,6 +723,10 @@ ol {
 	opacity: 0.7;
 }
 
+.breadcrumb__text2 h2 {
+	margin-top: -83px;
+}
+
 /*---------------------
   Sidebar
 -----------------------*/
