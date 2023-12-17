@@ -170,7 +170,7 @@
                 <%for(int i = 0; i<list.size(); i++){ %>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/seafood/<%=list.get(i).getF_IMG()%>">
-                            <h5><a href="#"><%=list.get(i).getF_NAME() %></a></h5>
+                            <h5><a href="./shop_grid.jsp?F_NUM=<%=list.get(i).getF_NUM()%>"><%=list.get(i).getF_NAME() %></a></h5>
                         </div>
                     </div>
                     <%} %>
