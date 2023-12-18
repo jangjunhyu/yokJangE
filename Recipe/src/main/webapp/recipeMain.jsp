@@ -149,7 +149,7 @@
                     </div>
                     <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg" style="height: 500px;">
                         <div class="hero__text">
-                            <span>욕쟁이의 제철식당 레시피</span>
+                            <span>제철식당 레시피</span>
                             <h2>맛 보장 <br />100% !!</h2>
                             <p>오늘은 내가 요리사~
                                 <br>무슨 요리를 해먹을까~</p>
