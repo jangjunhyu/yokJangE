@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="model.foodDAO"%>
@@ -43,11 +44,8 @@
 		nm = request.getParameter("month");
 	}
 	ArrayList<Integer> rdArr = new ArrayList<>();
-	for(int i=0; i<list.size(); i++){
-		for(int j=0; j<i; j++){
-			
-		}
-	}
+	Random rd = new Random();
+	int ranNum = rd.nextInt(list.size())+1;
 %>
 
     <!-- Page Preloder -->
@@ -153,7 +151,7 @@
                             <h2>맛 보장 <br />100% !!</h2>
                             <p>오늘은 내가 요리사~
                                 <br>무슨 요리를 해먹을까~</p>
-                            <a href="#" class="primary-btn">지금 바로 가기</a>
+                            <a href="./shop_grid.jsp?F_NUM=<%=ranNum%>" class="primary-btn">지금 바로 가기</a>
                         </div>
                     </div>
                 </div>
