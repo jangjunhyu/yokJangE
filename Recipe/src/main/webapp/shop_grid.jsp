@@ -194,7 +194,7 @@
                     <%for(int i=0; i<list.size(); i++){ %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/제철요리사진/<%=list.get(i).getR_PIC()%>" style="width:300px">
+                                <div class="product__item__pic set-bg" data-setbg="img/제철요리사진/<%=list.get(i).getR_PIC()%>" style="width:300px;">
                                     <ul class="product__item__pic__hover">
                                         보기
                                     </ul>
