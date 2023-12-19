@@ -13,4 +13,7 @@
 	<select id="getRecipeVo" parameterType="int" resultType="model.recipeDTO">
 		select * from recipe1 where R_NUM = #{R_NUM}
 	</select>
+	<select id="getFood" parameterType="int" resultType="model.foodDTO">
+		select * from foods where f_num = #{f_num}
+	</select>
 </mapper>

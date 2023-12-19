@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="model.foodDTO"%>
+<%@page import="model.foodDAO"%>
 <%@page import="model.recipeDTO"%>
 <%@page import="model.recipeDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -32,6 +35,8 @@
 	int R_NUM = Integer.parseInt(request.getParameter("R_NUM"));
 	recipeDTO vo = new recipeDAO().getRecipeVo(R_NUM);
 	String[] content = vo.getR_CONTENT().split("//");
+	foodDTO f_vo = new foodDAO().getFood(vo.getF_NUM());
+	List<recipeDTO> list = new recipeDAO().getRecipe(vo.getF_NUM());
 %>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -164,7 +169,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>~ 레시피</h2>
+                        <h2><%=f_vo.getF_NAME() %> 레시피</h2>
                         <div class="breadcrumb__option">
                             <span></span>
                         </div>
@@ -175,7 +180,7 @@
     </section>
     <div class="col-lg-12 text-center">
         <div class="breadcrumb__text2">
-            <h2>~ 레시피</h2>
+            <h2><%=f_vo.getF_NAME() %> 레시피</h2>
         </div>
     </div>
     <!-- Breadcrumb Section End -->
@@ -194,7 +199,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3>~의 레시피</h3>
+                        <h3><%=vo.getR_NAME() %>의 레시피</h3>
                         <ul>
                             <li><b>조리시간</b> <span>30분</span></li>
                             <li><b>조리 난이도</b> <span>중</span></li>
@@ -239,58 +244,38 @@
                 </div>
             </div>
             <div class="row">
+            <%if(list.size()>4){
+            	for(int i=0; i<4; i++){
+            	%>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/제철요리사진/<%=list.get(i).getR_PIC()%>">
                             <ul class="product__item__pic__hover">
                                 보기
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">가리비</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#"><%=list.get(i).getR_NAME() %></a></h6>
+                            <h5>중</h5>
                         </div>
                     </div>
                 </div>
+                <%}}else{
+                	for(int i=0; i<list.size(); i++){%>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/제철요리사진/<%=list.get(i).getR_PIC()%>">
                             <ul class="product__item__pic__hover">
                                 보기
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">도미</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#"><%=list.get(i).getR_NAME() %></a></h6>
+                            <h5>중</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                            <ul class="product__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">광어</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                            <ul class="product__item__pic__hover">
-                                보기
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">주꾸미</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
+                <%}} %>
             </div>
         </div>
     </section>

@@ -29,4 +29,16 @@ public class foodDAO {
 		}
 		return li;
 	}
+	
+	public foodDTO getFood(int f_num) {
+		foodDTO vo = null;
+		try {
+			vo = sqlSession.selectOne("getFood", f_num);
+		} catch (Exception e) {
+			e.getStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return vo;
+	}
 }
