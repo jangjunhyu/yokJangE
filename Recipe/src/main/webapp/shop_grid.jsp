@@ -137,7 +137,7 @@
                             <span>월별 제철요리</span>
                         </div>
                         <ul>
-                            <li><a href="#">전체보기</a></li>
+                            <li><a href="./recipeMain.jsp?month=All">전체보기</a></li>
                         <%for(int i=0; i<12; i++){ %>
 							<li><a href="./recipeMain.jsp?month=<%=i+1%>"><%=i+1%>월</a></li>
 						<%}%>
