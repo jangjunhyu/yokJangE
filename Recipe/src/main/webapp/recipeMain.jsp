@@ -40,6 +40,8 @@
 	String nm = "";
 	if(request.getParameter("month")==null){
 		nm = String.valueOf(nowMonth);
+	}else if(request.getParameter("month")=="All"){
+		nm = "All";
 	}else{
 		nm = request.getParameter("month");
 	}
@@ -129,7 +131,7 @@
                             <span>월별 제철요리</span>
                         </div>
                         <ul>
-                            <li><a href="#">전체보기</a></li>
+                            <li><a href="./recipeMain.jsp?month=All">전체보기</a></li>
 						<%for(int i=0; i<12; i++){ %>
 							<li><a href="./recipeMain.jsp?month=<%=i+1%>"><%=i+1%>월</a></li>
 						<%}%>
@@ -184,7 +186,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2><%=nm%>월 레시피</h2>
+                    <%if(!nm.equals("All")){ %>
+                        <h2><%=nm%>월 제철 해산물</h2>
+                        <%}else{ %>
+                        <h2>전체 해산물</h2>
+                        <%} %>
                     </div>
                     <div class="featured__controls">
                         <ul>
@@ -194,7 +200,8 @@
                 </div>
             </div>
             <div class="row featured__filter">
-		<%for(int i=0; i<list.size(); i++){
+		<%if(!nm.equals("All")){
+		for(int i=0; i<list.size(); i++){
 			if(list.get(i).getF_MONTH().contains(nm)){
 		%>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
@@ -210,7 +217,22 @@
                         </div>
                     </div>
                 </div>
-                <%}}%>
+                <%}}}else{
+                for(int i=0; i<list.size(); i++){%>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/seafood/<%=list.get(i).getF_IMG()%>">
+                            <ul class="featured__item__pic__hover">
+                                보기
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="./shop_grid.jsp?F_NUM=<%=list.get(i).getF_NUM()%>"><%=list.get(i).getF_NAME() %></a></h6>
+                            <h5><%=list.get(i).getF_PRICE()%>원</h5>
+                        </div>
+                    </div>
+                </div>
+                <%}} %>
             </div>
         </div>
     </section>
