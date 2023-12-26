@@ -35,14 +35,16 @@
 <%
 	List<foodDTO> list = new foodDAO().getFoodList();
 	LocalDate now = LocalDate.now();
+	
+	//현재 월 받아오기
 	int nowMonth = now.getMonthValue();
 	
 	String nm = "";
-	if(request.getParameter("month")==null){
+	if(request.getParameter("month")==null){//만약 get 방식의 month값이 없다면 현재 월 값 nm 변수에 저장
 		nm = String.valueOf(nowMonth);
-	}else if(request.getParameter("month")=="All"){
+	}else if(request.getParameter("month")=="All"){ //만약 All 이라면 All값 저장
 		nm = "All";
-	}else{
+	}else{//month 값이 있다면 month값 저장
 		nm = request.getParameter("month");
 	}
 	ArrayList<Integer> rdArr = new ArrayList<>();
